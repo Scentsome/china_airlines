@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         let thirdBoard = UIStoryboard(name: "Third", bundle: nil)
         
 //        let vc = ViewController()
-        var vc:ViewController? =  thirdBoard.instantiateInitialViewController() as? ViewController
+        var vc:UIViewController? =  thirdBoard.instantiateInitialViewController()
 //        vc = thirdBoard.instantiateViewController(withIdentifier: "WhiteVC")
         
         
@@ -35,6 +35,21 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(segue.identifier)
+        print(segue.destination)
+        print(segue.source)
+        
+        
+        
+    }
+    
+    @IBAction func home(segue:UIStoryboardSegue){
+        print("back to home")
+        print(segue.destination)
+        print(segue.source)
     }
 
 
