@@ -10,6 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  //  override func loadView() {
+    
+  //  }
+    
+    @IBAction func showVCOnThird(_ sender: Any) {
+        
+        let thirdBoard = UIStoryboard(name: "Third", bundle: nil)
+        
+//        let vc = ViewController()
+        var vc:ViewController? =  thirdBoard.instantiateInitialViewController() as? ViewController
+//        vc = thirdBoard.instantiateViewController(withIdentifier: "WhiteVC")
+        
+        
+        if vc != nil {
+            present(vc!, animated: true, completion: nil)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
