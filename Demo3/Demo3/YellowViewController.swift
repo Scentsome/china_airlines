@@ -9,7 +9,46 @@
 import UIKit
 
 class YellowViewController: UIViewController {
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBAction func loadImage(_ sender: Any) {
+        
+        
+        let imageFilePath = "/Users/michael/Desktop/port80.png"
+        let fileURL = URL(fileURLWithPath: imageFilePath)
+        
+        do {
+            let imageData = try Data(contentsOf: fileURL)
+            
+            let image = UIImage(data: imageData)
+            
+            self.imageView.image = image
+            
+        } catch {
+            print(error)
+        }
+        
+        
+        
+        
+    }
+    @IBAction func moveWhite(_ sender: Any) {
+        
+        
+        
 
+
+//        }
+        
+        
+        UIView.animate(withDuration: 1.0, animations: {
+            self.whiteView.center = CGPoint(x:100,y:100)
+        }) { (_) in
+            UIView.animate(withDuration: 1.0) {
+                self.whiteView.frame = CGRect(x:20,y:80,width:20,height:30)
+            }
+        }
+    }
     @IBAction func removeView(_ sender: Any) {
         let blueView:UIView? = self.view.viewWithTag(34)
 //        blueView?.removeFromSuperview()
@@ -27,8 +66,9 @@ class YellowViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.whiteView.layer.borderWidth = 5.0
+        self.whiteView.layer.borderColor = UIColor.blue.cgColor
+        self.whiteView.layer.cornerRadius = 10.0
     }
 
     override func didReceiveMemoryWarning() {

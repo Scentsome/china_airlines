@@ -7,14 +7,31 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
+
+protocol ViewControllerDelegate {
+    func didSendData(_ viewController:ViewController, withData data:String)
+}
+
 
 class ViewController: UIViewController {
-
-  //  override func loadView() {
+    @IBOutlet weak var input1: UITextField!
+    lazy  var rects:Array<String>? = Array<String>()
+//    var manager = CLLocationManager()
+//    var annotation = MKAnnotation()
+    @IBOutlet weak var textField: UITextField!
+    //  override func loadView() {
     
   //  }
     
     @IBAction func showVCOnThird(_ sender: Any) {
+//        if rects == nil {
+//            rects = Array<String>()
+//        }
+        
+//        rects.
+        
         
         let thirdBoard = UIStoryboard(name: "Third", bundle: nil)
         
@@ -29,9 +46,16 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        input1.delegate = self
+//        textField.becomeFirstResponder()
+//        self.becomeFirstResponder()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+//        textField.becomeFirstResponder()
+        self.becomeFirstResponder()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -52,12 +76,34 @@ class ViewController: UIViewController {
         print(segue.source)
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        textField.resignFirstResponder()
+        
+        view.endEditing(true)
+    }
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         print("moved","view  controller")
     }
     
-   
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            print("Shake event handler")
+        }
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        get {
+            return true
+        }
+    }
 
+}
+
+extension ViewController : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
 
