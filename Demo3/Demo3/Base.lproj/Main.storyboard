@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mwv-35-07b">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -82,19 +82,34 @@
                                     <action selector="dimissVC" destination="Vdb-KU-BFt" eventType="touchUpInside" id="L5s-A6-ovo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yd4-CW-7v4">
+                                <rect key="frame" x="259" y="88" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Photo"/>
+                                <connections>
+                                    <action selector="showPhotoAlbum:" destination="Vdb-KU-BFt" eventType="touchUpInside" id="68x-Es-Zrc"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GY8-fB-jTc">
+                                <rect key="frame" x="24" y="172" width="335" height="431"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="vka-7Z-C9K"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="GY8-fB-jTc" id="lQt-sx-LKs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UPH-gv-HWB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118" y="-45"/>
+            <point key="canvasLocation" x="117.59999999999999" y="-45.42728635682159"/>
         </scene>
-        <!--View Controller-->
+        <!--Yellow View Controller-->
         <scene sceneID="FoA-kA-GqN">
             <objects>
-                <viewController id="Mwv-35-07b" sceneMemberID="viewController">
+                <viewController id="Mwv-35-07b" customClass="YellowViewController" customModule="Demo3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PcY-LT-NTv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,10 +122,34 @@
                                     <segue destination="2Tz-85-qcc" kind="unwind" unwindAction="homeWithSegue:" id="EXb-zt-uD6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hr8-If-jtm">
+                                <rect key="frame" x="172" y="282" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="add"/>
+                                <connections>
+                                    <action selector="addView:" destination="Mwv-35-07b" eventType="touchUpInside" id="ziW-sv-dlQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPh-ay-hjf">
+                                <rect key="frame" x="162" y="340" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="remove"/>
+                                <connections>
+                                    <action selector="removeView:" destination="Mwv-35-07b" eventType="touchUpInside" id="zTB-vu-ldr"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jRH-0v-5ie" customClass="MyView" customModule="Demo3" customModuleProvider="target">
+                                <rect key="frame" x="-51" y="198" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="r38-IR-hOg"/>
                     </view>
+                    <connections>
+                        <outlet property="whiteView" destination="jRH-0v-5ie" id="hM2-1a-gKs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w12-wk-WFb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="2Tz-85-qcc" userLabel="Exit" sceneMemberID="exit"/>

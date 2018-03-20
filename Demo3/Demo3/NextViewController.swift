@@ -10,10 +10,19 @@ import UIKit
 
 class NextViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
     @IBAction func dimissVC(){
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func showPhotoAlbum(_ sender: Any) {
+        
+        let imagePicker = UIImagePickerController()
+        
+        imagePicker.delegate = self
+        
+        present(imagePicker, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,3 +51,19 @@ class NextViewController: UIViewController {
 //    }
 
 }
+
+extension NextViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        print(info)
+        let image:UIImage? = info["UIImagePickerControllerOriginalImage"] as? UIImage
+        if image != nil {
+            self.imageView.image = image
+        }
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+}
+
