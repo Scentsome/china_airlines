@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var testBtn: UIButton!
     @IBOutlet weak var defaultLabel: UILabel!
     @IBOutlet weak var input: UITextField!
     
@@ -37,9 +38,20 @@ class ViewController: UIViewController {
         tableView.reloadData()
     }
     
-    
+    @objc func sayHello(sender:UIButton){
+        print("hi button")
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (timer) in
+            if sender.state == UIControlState.highlighted {
+                print("button...")
+            }else {
+                timer.invalidate()
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        testBtn.addTarget(self, action: #selector(ViewController.sayHello(sender:)), for: UIControlEvents.touchDown)
+        
         
     NotificationCenter.default.addObserver(forName: NSNotification.Name.UIKeyboardDidShow, object: nil, queue: nil) { (notification) in
             print(notification)
@@ -65,6 +77,9 @@ class ViewController: UIViewController {
         }else {
             self.defaultLabel.text = password!
         }
+        
+        
+        
         }
 
     override func didReceiveMemoryWarning() {
