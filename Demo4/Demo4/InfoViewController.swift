@@ -10,6 +10,12 @@ import UIKit
 
 class InfoViewController: UIViewController {
 
+    @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var textField: UITextField!
+    
+    @IBAction func sayHello(_ sender: Any) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

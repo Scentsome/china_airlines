@@ -15,7 +15,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        var filePath = "/Users/michael/Desktop/tmp/class.txt"
+        let wContents:String = "Hello class"
+        do {
+            let data:Data?  = try wContents.data(using: .utf8)
+            
+            let fileURL:URL = URL(fileURLWithPath: filePath)
+
+            try data?.write(to: fileURL)
+        }catch {
+            print(error)
+        }
+        
+        var contents:String?
+        
+        
+        do {
+            contents = try String(contentsOfFile: filePath, encoding: String.Encoding.utf8)
+            
+            print(contents)
+            
+        } catch {
+            print(error)
+        }
+        
         return true
     }
 
