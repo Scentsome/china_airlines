@@ -12,33 +12,62 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    func docFolder() -> String {
+        var path: Array = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+        var documentsDirectory: String = path[0]
+        return documentsDirectory
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        var filePath = "/Users/michael/Desktop/tmp/class.txt"
-        let wContents:String = "Hello class"
-        do {
-            let data:Data?  = try wContents.data(using: .utf8)
-            
-            let fileURL:URL = URL(fileURLWithPath: filePath)
-
-            try data?.write(to: fileURL)
-        }catch {
-            print(error)
-        }
-        
-        var contents:String?
         
         
-        do {
-            contents = try String(contentsOfFile: filePath, encoding: String.Encoding.utf8)
-            
-            print(contents)
-            
-        } catch {
-            print(error)
-        }
+        var dict:[String:Int] = ["First":10,"Second":20,"Age":18]
+        
+        var nsDict:NSDictionary = dict as NSDictionary
+        
+        nsDict.write(toFile: docFolder() + "/myplist.plist", atomically: true)
+        
+//        let newDict:NSDictionary? = NSDictionary(contentsOfFile: "/Users/michael/Desktop/tmp/myplist.plist")
+//
+//        if newDict != nil {
+//            var person:[String:Int]? = newDict! as? [String:Int]
+//
+//
+//        }
+        
+        
+        
+        
+        var bundlePath = Bundle.main.bundlePath
+        print(bundlePath)
+        var imageFilePath = bundlePath + "/port80.png"
+        
+        
+        
+//        var filePath = "/Users/michael/Desktop/tmp/class.txt"
+//        let wContents:String = "Hello class"
+//        do {
+//            let data:Data?  = try wContents.data(using: .utf8)
+//
+//            let fileURL:URL = URL(fileURLWithPath: filePath)
+//
+//            try data?.write(to: fileURL)
+//        }catch {
+//            print(error)
+//        }
+        
+//        var contents:String?
+//
+//
+//        do {
+//            contents = try String(contentsOfFile: filePath, encoding: String.Encoding.utf8)
+//
+//            print(contents)
+//
+//        } catch {
+//            print(error)
+//        }
         
         return true
     }

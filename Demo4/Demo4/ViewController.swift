@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var defaultLabel: UILabel!
     @IBOutlet weak var input: UITextField!
     
     @IBOutlet weak var tableView: UITableView!
@@ -23,6 +24,13 @@ class ViewController: UIViewController {
     
     @IBAction func addItem(_ sender: Any) {
         
+        var defaults = UserDefaults.standard
+
+        defaults.set(input.text!, forKey: "password")
+        
+        defaults.synchronize()
+        
+        
 //        myData.append(input.text!)
         myData.insert((input.text!, false ), at: 0)
         
@@ -32,8 +40,31 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    NotificationCenter.default.addObserver(forName: NSNotification.Name.UIKeyboardDidShow, object: nil, queue: nil) { (notification) in
+            print(notification)
+        }
+        
+        
+        
         tableView.dataSource = self
         tableView.delegate = self
+        
+        
+        print("documents", docFolder())
+        print("home",NSHomeDirectory())
+        
+        
+        var defaults = UserDefaults.standard
+        
+        var password:String? = defaults.string(forKey: "password")
+        
+        if password == nil  {
+            print("No login")
+            self.defaultLabel.text = "no password"
+        }else {
+            self.defaultLabel.text = password!
+        }
         }
 
     override func didReceiveMemoryWarning() {
@@ -41,6 +72,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func docFolder() -> String {
+        var path: Array = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+        var documentsDirectory: String = path[0]
+        return documentsDirectory
+    }
 
 }
 
