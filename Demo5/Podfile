@@ -9,5 +9,6 @@ target 'Demo5' do
 
   pod 'CryptoSwift', '~> 0.8'
   pod 'Alamofire', '~> 4.0'
+  pod 'ReachabilitySwift', '~> 4.0'
 
 end

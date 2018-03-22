@@ -1,15 +1,18 @@
 PODS:
   - Alamofire (4.5.1)
   - CryptoSwift (0.8.0)
+  - ReachabilitySwift (4.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - CryptoSwift (~> 0.8)
+  - ReachabilitySwift (~> 4.0)
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   CryptoSwift: f81907430ebbe38b8404b4f6fb40f3c576a8755f
+  ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
 
-PODFILE CHECKSUM: b1d45abe78c0ffbed476a6ac7887a37bd8d42b64
+PODFILE CHECKSUM: fa6a02f908a1d024febd8cb2f767771d6f42a9dd
 
 COCOAPODS: 1.1.1

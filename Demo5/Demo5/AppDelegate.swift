@@ -8,14 +8,38 @@
 
 import UIKit
 import CryptoSwift
+import Reachability
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    let reachability = Reachability()!
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        do {
+            try reachability.startNotifier()
+        } catch {
+            
+        }
+//        reachability.whenReachable = { reachability in
+//            if reachability.connection == .wifi {
+//                print("Reachable via WiFi")
+//            } else {
+//                print("Reachable via Cellular")
+//            }
+//        }
+//        reachability.whenUnreachable = { _ in
+//            print("Not reachable")
+//        }
+//        
+//        do {
+//            try reachability.startNotifier()
+//        } catch {
+//            print("Unable to start notifier")
+//        }
+        
+        
         print("12345abc".md5())
         
         var jsonFilePath:String = "/Users/michael/Desktop/tmp/library.json"
