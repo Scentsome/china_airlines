@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1523C3223338DFAD9FDF16AD /* Pods_Demo5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A2E8D21B60B77735C66292 /* Pods_Demo5.framework */; };
 		4C1A6A1A20635F2900F75057 /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C1A6A1920635F2900F75057 /* phone.png */; };
-		4C1A6A1C206361D500F75057 /* NewLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A6A1B206361D500F75057 /* NewLibrary.swift */; };
+		4C1A6A1E20637AB500F75057 /* NewLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1A6A1D20637AB500F75057 /* NewLibrary.swift */; };
 		4C8A0316206338FE000E5219 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A0315206338FE000E5219 /* AppDelegate.swift */; };
 		4C8A0318206338FE000E5219 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A0317206338FE000E5219 /* ViewController.swift */; };
 		4C8A031B206338FE000E5219 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C8A0319206338FE000E5219 /* Main.storyboard */; };
@@ -21,7 +21,7 @@
 /* Begin PBXFileReference section */
 		3E653C54F2A452F3DF75706D /* Pods-Demo5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo5.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo5/Pods-Demo5.release.xcconfig"; sourceTree = "<group>"; };
 		4C1A6A1920635F2900F75057 /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone.png; sourceTree = "<group>"; };
-		4C1A6A1B206361D500F75057 /* NewLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewLibrary.swift; path = ../../../../../../../../Dropbox/course/iOS/longTerm/code/swift/PlaceInTaipei/PlaceInTaipei/NewLibrary.swift; sourceTree = "<group>"; };
+		4C1A6A1D20637AB500F75057 /* NewLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewLibrary.swift; sourceTree = "<group>"; };
 		4C8A0312206338FE000E5219 /* Demo5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8A0315206338FE000E5219 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C8A0317206338FE000E5219 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 		4C8A0314206338FE000E5219 /* Demo5 */ = {
 			isa = PBXGroup;
 			children = (
-				4C1A6A1B206361D500F75057 /* NewLibrary.swift */,
+				4C1A6A1D20637AB500F75057 /* NewLibrary.swift */,
 				4C1A6A1920635F2900F75057 /* phone.png */,
 				4C8A0315206338FE000E5219 /* AppDelegate.swift */,
 				4C8A0317206338FE000E5219 /* ViewController.swift */,
@@ -222,8 +222,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C8A0318206338FE000E5219 /* ViewController.swift in Sources */,
-				4C1A6A1C206361D500F75057 /* NewLibrary.swift in Sources */,
 				4C8A0316206338FE000E5219 /* AppDelegate.swift in Sources */,
+				4C1A6A1E20637AB500F75057 /* NewLibrary.swift in Sources */,
 				4C8A032820634100000E5219 /* Library.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

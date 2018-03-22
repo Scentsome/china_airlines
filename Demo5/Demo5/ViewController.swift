@@ -116,8 +116,6 @@ class ViewController: UIViewController {
         var libraryURL = "http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=0a1e7957-7699-452c-8020-bf11a5408fc8"
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         Alamofire.request(libraryURL).responseJSON { (response) in
-            
-            
             if response.error != nil {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 return
