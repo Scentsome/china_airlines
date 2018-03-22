@@ -18,8 +18,9 @@ struct JSONData : Codable {
 
 class ViewController: UIViewController {
     
+    var libraries:[Item]?
     
-    
+    @IBOutlet weak var tableView: UITableView!
     func requestWith(endUrl: String, imageData: Data?, parameters: [String : Any] ){
         let url = endUrl
         let headers: HTTPHeaders = [
@@ -112,6 +113,29 @@ class ViewController: UIViewController {
 //            }
         }
         
+        var libraryURL = "http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=0a1e7957-7699-452c-8020-bf11a5408fc8"
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        Alamofire.request(libraryURL).responseJSON { (response) in
+            
+            
+            if response.error != nil {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                return
+            }
+            do {
+                var newLibrary:NewLibrary = try JSONDecoder().decode(NewLibrary.self, from: response.data!)
+                
+                self.libraries = newLibrary.result.results
+                print(self.libraries)
+                self.tableView.reloadData()
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            }catch {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                print(error)
+            }
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -120,5 +144,31 @@ class ViewController: UIViewController {
     }
 
 
+}
+
+extension ViewController : UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if libraries == nil {
+            return 0
+        }
+        return libraries!.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cellID = "CELL"
+        var cell:UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: cellID)
+        
+        if cell == nil {
+            cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellID)
+        }
+        
+        cell?.textLabel?.text = libraries![indexPath.row].o_tlc_agency_name
+        
+        cell?.detailTextLabel?.text = libraries![indexPath.row].o_tlc_agency_address
+        
+        return cell!
+    }
+    
+    
 }
 
