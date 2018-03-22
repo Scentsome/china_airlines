@@ -17,6 +17,42 @@ struct JSONData : Codable {
 }
 
 class ViewController: UIViewController {
+    
+    
+    
+    func requestWith(endUrl: String, imageData: Data?, parameters: [String : Any] ){
+        let url = endUrl
+        let headers: HTTPHeaders = [
+            "Content-type": "multipart/form-data"
+        ]
+        Alamofire.upload(multipartFormData: { (multipartFormData) in
+            for (key, value) in parameters {
+                multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
+            }
+            if let data = imageData{
+                multipartFormData.append(data, withName: "image", fileName: "image.png", mimeType: "image/png")
+            }
+        }, usingThreshold: UInt64.init(), to: url, method: .post, headers: headers) { (result) in
+            switch result{
+            case .success(let upload, _, _):
+                upload.responseJSON { response in
+                    print("Succesfully uploaded")
+                    if let err = response.error{
+                        print("Error in upload:" )
+                        return
+                    }
+                }
+            case .failure(let error):
+                print("Error in upload: \(error.localizedDescription)")
+            }
+        }
+    }
+    @IBAction func uploadImage(_ sender: Any) {
+        
+        let imageData = UIImagePNGRepresentation(UIImage(named:"phone.png")!)
+        requestWith(endUrl: "http://localhost:8080/upload", imageData: imageData, parameters: [:])
+    }
+    
     @IBAction func getMETHOD(_ sender: Any) {
         var urlString = "http://www.apple.com"
 //        Alamofire.request(urlString).response { response in
