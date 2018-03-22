@@ -1,5 +1,5 @@
 //
-//  InfoViewController.swift
+//  LoginViewController.swift
 //  Demo5
 //
 //  Created by Michael on 22/03/2018.
@@ -7,36 +7,24 @@
 //
 
 import UIKit
-import MapKit
-class InfoViewController: UIViewController {
 
-    @IBOutlet weak var titleLabel: UILabel!
+class LoginViewController: UIViewController {
+
+    @IBOutlet weak var password: UITextField!
     
-    @IBAction func back(_ sender: Any) {
+    
+    @IBAction func login(_ sender: Any) {
+        var userDefaults = UserDefaults.standard
+        
+        userDefaults.set(password.text?.md5(), forKey: "password")
+        userDefaults.synchronize()
+        
         dismiss(animated: true, completion: nil)
     }
-    @IBOutlet weak var map: MKMapView!
-    
-    var infoTitle:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLabel.text = infoTitle
+
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        print("====vc2 viewWillAppear")
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        print("====vc2 viewDidAppear")
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        print("====vc2 viewWillDisappear")
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        print("====vc2 viewDidDisappear")
     }
 
     override func didReceiveMemoryWarning() {

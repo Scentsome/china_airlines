@@ -1,5 +1,5 @@
 //
-//  InfoViewController.swift
+//  SelectViewController.swift
 //  Demo5
 //
 //  Created by Michael on 22/03/2018.
@@ -7,36 +7,25 @@
 //
 
 import UIKit
-import MapKit
-class InfoViewController: UIViewController {
 
-    @IBOutlet weak var titleLabel: UILabel!
+protocol SelectViewControllerDelegate {
+    func selectVC(_ select:SelectViewController, with date:Date )
+}
+
+class SelectViewController: UIViewController {
+    var delegate:SelectViewControllerDelegate?
+    @IBOutlet weak var datePicker: UIDatePicker!
     
-    @IBAction func back(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+    
+    @IBAction func backToHome(_ sender: Any) {
+        delegate?.selectVC(self, with: datePicker.date)
+        print(datePicker.date)
     }
-    @IBOutlet weak var map: MKMapView!
     
-    var infoTitle:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLabel.text = infoTitle
+
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        print("====vc2 viewWillAppear")
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        print("====vc2 viewDidAppear")
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        print("====vc2 viewWillDisappear")
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        print("====vc2 viewDidDisappear")
     }
 
     override func didReceiveMemoryWarning() {

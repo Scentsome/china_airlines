@@ -17,10 +17,27 @@ struct JSONData : Codable {
 }
 
 class ViewController: UIViewController {
+    @IBOutlet weak var dateLabel: UILabel!
     
     var libraries:[Item]?
     
     @IBOutlet weak var tableView: UITableView!
+    
+    
+    @IBAction func logout(_ sender: Any) {
+        
+        var userDefaults = UserDefaults.standard
+        userDefaults.removeObject(forKey: "password")
+        
+        userDefaults.synchronize()
+        
+        let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC")
+        
+        present(loginVC!, animated: true, completion: nil)
+        
+    }
+    
+    
     func requestWith(endUrl: String, imageData: Data?, parameters: [String : Any] ){
         let url = endUrl
         let headers: HTTPHeaders = [
@@ -96,8 +113,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("vc1 viewDidLoad")
         
-        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.reachabilityChanged(note:)), name: .reachabilityChanged, object: nil)
+         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.reachabilityChanged(note:)), name: .reachabilityChanged, object: nil)
         
         var myQueue = DispatchQueue(label: "com.scentsome")
         myQueue = DispatchQueue.global()
@@ -132,6 +150,33 @@ class ViewController: UIViewController {
                 print(error)
             }
         }
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("vc1 viewWillAppear")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("vc1 viewDidAppear")
+        
+        var userDefaults = UserDefaults.standard
+        
+        var password: String? = userDefaults.value(forKey: "password") as? String
+        
+        if password == nil {
+            let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC")
+            
+            present(loginVC!, animated: true, completion: nil)
+        }
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        print("vc1 viewWillDisappear")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("vc1 viewDidDisappear")
         
         
     }
@@ -187,5 +232,44 @@ extension ViewController : UITableViewDelegate {
         
         
     }
+    
+    override  var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.all
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        print("size: \(size.width), \(size.height)")
+        
+        if size.width > size.height{
+            print("landscape")
+            
+        } else if size.width < size.height{
+            print("portrait")
+            
+        } else {
+            print("Unknow")
+        }
+    }
+    
+    @IBAction func home(segue:UIStoryboardSegue) {
+        
+    }
 }
-
+extension ViewController : SelectViewControllerDelegate {
+    func selectVC(_ select: SelectViewController, with date: Date) {
+        
+        var dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = "YYYY/MM/dd"
+        
+        self.dateLabel.text =  dateFormatter.string(from: date)
+        print(date)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var selectVC:SelectViewController? =  segue.destination as? SelectViewController
+        
+        selectVC?.delegate = self
+    }
+}
