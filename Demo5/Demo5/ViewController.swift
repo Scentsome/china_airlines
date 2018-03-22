@@ -170,3 +170,22 @@ extension ViewController : UITableViewDataSource {
     
 }
 
+extension ViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var libraryTitle = libraries![indexPath.row].o_tlc_agency_name
+        
+        var infoVC:InfoViewController? = self.storyboard?.instantiateViewController(withIdentifier: "InfoVC") as? InfoViewController
+         infoVC?.infoTitle = libraryTitle
+        if infoVC != nil {
+            present(infoVC!, animated: true, completion: {
+//               infoVC?.titleLabel.text = libraryTitle
+
+            })
+        }
+        
+        
+        
+        
+    }
+}
+
