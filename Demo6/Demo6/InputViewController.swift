@@ -18,15 +18,12 @@ class InputViewController: UIViewController {
         if closureObject != nil {
             closureObject!(inputField.text!)
         }
-//        if homeVC != nil {
-//            
-//        }
+    self.navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.title = "Input"
     }
 
     override func didReceiveMemoryWarning() {

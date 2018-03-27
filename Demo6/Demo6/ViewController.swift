@@ -12,6 +12,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var myLabel: UILabel!
     
     
+    @IBAction func compose(_ sender: Any) {
+        
+        print("compose....")
+    }
     func changeLabel(data:String) -> Void{
         self.myLabel.text = data
     }
@@ -28,15 +32,26 @@ class ViewController: UIViewController {
         
         if let realVC = inputVC {
 //            present(realVC, animated: true, completion: nil)
-//            self.navigationController?.pushViewController(realVC, animated: true)
+        self.navigationController?.pushViewController(realVC, animated: true)
         }
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Main"
+        self.title = "Hello"
+        
+        let leftButton = UIBarButtonItem(title: "Record", style: UIBarButtonItemStyle.plain, target: self, action:#selector(ViewController.sayHello(sender:)))
+        
+        self.navigationItem.leftBarButtonItem = leftButton
+        
+        
+        var backButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem  = backButton
 //        self.navigationItem.rightBarButtonItem
+    }
+    @objc func sayHello(sender:UIBarButtonItem){
+        print("Hello.....")
     }
 
     override func didReceiveMemoryWarning() {
