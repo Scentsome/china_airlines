@@ -9,7 +9,20 @@
 import UIKit
 
 class InputViewController: UIViewController {
-
+    
+    @IBOutlet weak var inputField: UITextField!
+    var closureObject: ((String) -> Void)?
+    var stringData = ""
+//    var homeVC:ViewController?
+    @IBAction func backToHome(_ sender: Any) {
+        if closureObject != nil {
+            closureObject!(inputField.text!)
+        }
+//        if homeVC != nil {
+//            
+//        }
+        dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
