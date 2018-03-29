@@ -1,0 +1,31 @@
+
+<html>
+    
+    <script>
+        
+        function send(itemName){
+            var message = {item: "test"}
+        window.webkit.messageHandlers.wkMessage.postMessage(itemName);
+        }
+        
+        function createList(jsonString) {
+            var array = JSON.parse(jsonString);
+            for (var i=0;i<array.length;i++)
+            {
+                var li = document.createElement("li");
+                var t = document.createTextNode(array[i]);
+                var s = new String(array[i]);
+                li.appendChild(t);
+                li.onclick = (function(s){
+                              return function(){
+                              send(s.valueOf());
+                              }
+                              })(s);
+
+                document.body.appendChild(li);
+            }
+        }
+    
+        </script>
+    <h1> hello </h1>
+    </html>

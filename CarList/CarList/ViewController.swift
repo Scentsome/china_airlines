@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBAction func addItem(_ sender: Any) {
         let alert = UIAlertController(title: "New Car",message: "Add a new car",preferredStyle: .alert)
         let saveAction = UIAlertAction(title: "Save",style: .default) { [unowned self] action in
+            
             guard let nameField = alert.textFields?.first,
                 let nameToSave = nameField.text else {
                     print("name is empty")
@@ -128,4 +129,5 @@ extension ViewController : UITableViewDelegate {
         let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
         return configuration
     }
+    
 }
