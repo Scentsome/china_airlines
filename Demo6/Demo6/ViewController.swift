@@ -16,6 +16,18 @@ class ViewController: UIViewController {
         
         print("compose....")
     }
+    
+    
+    @IBAction func showYellow(_ sender: Any) {
+        let yellowVC = self.storyboard?.instantiateViewController(withIdentifier: "YellowVC")
+        
+        
+        self.addChildViewController(yellowVC!)
+        
+        self.transition(from: self.childViewControllers[0], to: yellowVC!, duration: 1.0, options: UIViewAnimationOptions.transitionFlipFromBottom, animations: nil) { (finished) in
+            yellowVC?.didMove(toParentViewController: self)
+        }
+    }
     func changeLabel(data:String) -> Void{
         self.myLabel.text = data
     }
@@ -39,7 +51,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Hello"
+        
+        print(self.childViewControllers)
+        self.title = "Main"
         
         let leftButton = UIBarButtonItem(title: "Record", style: UIBarButtonItemStyle.plain, target: self, action:#selector(ViewController.sayHello(sender:)))
         
@@ -49,6 +63,9 @@ class ViewController: UIViewController {
         var backButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
         self.navigationItem.backBarButtonItem  = backButton
 //        self.navigationItem.rightBarButtonItem
+        
+//        self.tabBarItem.title = "Tab1"
+//        self.navigationController?.tabBarItem.title = "Tab1"
     }
     @objc func sayHello(sender:UIBarButtonItem){
         print("Hello.....")
