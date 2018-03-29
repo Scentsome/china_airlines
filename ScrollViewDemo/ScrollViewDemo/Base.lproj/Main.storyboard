@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="landscape">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScrollViewDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDZ-tg-thK">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="295"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="567"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screenshot.png" translatesAutoresizingMaskIntoConstraints="NO" id="ko7-qX-yVg">
                                         <rect key="frame" x="0.0" y="0.0" width="1280" height="800"/>
@@ -35,11 +35,20 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="8Mo-hg-Cde"/>
                                 </connections>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knQ-uK-MMZ">
+                                <rect key="frame" x="20" y="621" width="55" height="30"/>
+                                <state key="normal" title="scroll to"/>
+                                <connections>
+                                    <action selector="scrollToRect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xff-wb-WtR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VDZ-tg-thK" secondAttribute="bottom" constant="80" id="U5b-im-zV5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="knQ-uK-MMZ" secondAttribute="bottom" constant="16" id="d3L-En-We0"/>
                             <constraint firstItem="VDZ-tg-thK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eHr-TG-G9b"/>
+                            <constraint firstItem="knQ-uK-MMZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="faY-PK-i0r"/>
                             <constraint firstItem="VDZ-tg-thK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gxX-ld-ROV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VDZ-tg-thK" secondAttribute="trailing" id="lwc-Mm-DnO"/>
                         </constraints>
