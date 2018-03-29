@@ -15,6 +15,7 @@
 		4C91FE3E206C878F00336FB9 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C91FE3D206C878F00336FB9 /* ItemsViewController.swift */; };
 		4C91FE40206C927600336FB9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C91FE3F206C927600336FB9 /* Item.swift */; };
 		4C91FE42206C943500336FB9 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C91FE41206C943500336FB9 /* ItemCell.swift */; };
+		4C91FE44206C9A1E00336FB9 /* PDFReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C91FE43206C9A1E00336FB9 /* PDFReaderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4C91FE3D206C878F00336FB9 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		4C91FE3F206C927600336FB9 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		4C91FE41206C943500336FB9 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		4C91FE43206C9A1E00336FB9 /* PDFReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFReaderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				4C91FE3D206C878F00336FB9 /* ItemsViewController.swift */,
 				4C91FE3F206C927600336FB9 /* Item.swift */,
 				4C91FE41206C943500336FB9 /* ItemCell.swift */,
+				4C91FE43206C9A1E00336FB9 /* PDFReaderViewController.swift */,
 			);
 			path = Demo7;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C91FE44206C9A1E00336FB9 /* PDFReaderViewController.swift in Sources */,
 				4C91FE40206C927600336FB9 /* Item.swift in Sources */,
 				4C91FE2E206C783600336FB9 /* ViewController.swift in Sources */,
 				4C91FE3E206C878F00336FB9 /* ItemsViewController.swift in Sources */,

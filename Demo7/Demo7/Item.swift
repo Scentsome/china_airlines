@@ -13,5 +13,6 @@ struct DocItem {
 //    var coverImage:UIImage?
     var coverText:String = ""
     var timeLabel:String = ""
+    var pdfFilePath = ""
     
 }

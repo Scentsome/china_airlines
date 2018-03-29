@@ -10,6 +10,7 @@ import UIKit
 
 class ItemsViewController: UIViewController {
 
+    @IBOutlet weak var widthConstraint: NSLayoutConstraint!
     @IBOutlet weak var collectionView: UICollectionView!
     
 //    var isNew:Bool = false
@@ -18,7 +19,7 @@ class ItemsViewController: UIViewController {
 //    var coverText:String = ""
 //    var timeLabel:String = ""
     var items:[DocItem] = ["a","b","c","a","b","c","a","b","c","a","b","c"].map { (str) -> DocItem in
-        return DocItem(isNew:false, coverImage:nil,coverText:str,timeLabel:"\(Date())")
+        return DocItem(isNew:false, coverImage:nil, coverText:str, timeLabel:"\(Date())", pdfFilePath:"")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,13 @@ class ItemsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    override func viewWillLayoutSubviews() {
+        if view.bounds.size.width > view.bounds.size.height {
+            widthConstraint.constant = 620
+        }else {
+            widthConstraint.constant = 320
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -62,4 +69,23 @@ extension ItemsViewController : UICollectionViewDataSource {
     }
     
     
+}
+
+
+extension ItemsViewController : UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let selectedIndexPath = collectionView.indexPathsForSelectedItems![0]
+//        let cell:ItemCell = collectionView.cellForItem(at: selectedIndexPath) as! ItemCell
+        
+        let item = items[selectedIndexPath.row]
+        print(item)
+        
+        let pdfVC  = segue.destination as! PDFReaderViewController
+        pdfVC.item = item
+    }
 }
