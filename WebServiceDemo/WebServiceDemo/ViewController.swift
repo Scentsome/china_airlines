@@ -9,12 +9,14 @@
 import UIKit
 import Alamofire
 import Kanna
+import Zip
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         getCountryByIP()
+        zipTheCatPhoto(imgName: "port80.jpg", zipName: "port.zip")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -92,6 +94,60 @@ class ViewController: UIViewController {
         return urlRequest
     }
 
+    func zipTheCatPhoto(imgName: String, zipName: String) {
+        
+        let image = UIImage(named:imgName)
+        let imageData: Data = UIImageJPEGRepresentation(image!, 1.0)!
+        let docUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent(imgName)
+        
+        do {
+            try imageData.write(to: docUrl)
+            
+            
+        } catch {
+            print("Write Data Error")
+            print(error.localizedDescription)
+        }
+        
+        do {
+            let zipFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent(zipName)
+            print(zipFilePath)
+            try Zip.zipFiles(paths: [docUrl], zipFilePath: zipFilePath, password: nil, progress: { (progress) -> () in
+                print(progress)
+                
+            }) //Zip
+        }
+        catch {
+            print("Something went wrong")
+        }
+    }
+    
+    func requestUploadFile() {
+        
+        //        let image = UIImage(named:"robot")
+        let zipFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("port.zip")
+        
+        do {
+            let jpgZip:Data? = try Data(contentsOf: URL(fileURLWithPath: zipFilePath.absoluteString))
+            if let data = jpgZip {
+                
+                let parameters = ["data": String(data: data, encoding: .utf8)! ]
+                
+                let urlRequest = soapRequest12(url: "http://202.165.148.120/webfz/services/ListbyFdateMainService?wsdl", parameter: parameters, methodName: "saveFile", namespace: "http://MsgFromGrd.ws")
+                
+                Alamofire.request(urlRequest).response { (response) in
+                    
+                    if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                        
+                        print("Data: \(utf8Text)")
+                    }
+                }
+            }
+            
+        } catch {
+            print(error)
+        }
+    }
 
 }
 

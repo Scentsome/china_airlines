@@ -12,6 +12,7 @@
 		4C49B0A2206F64FB00EE1B68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C49B0A0206F64FB00EE1B68 /* Main.storyboard */; };
 		4C49B0A4206F64FB00EE1B68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C49B0A3206F64FB00EE1B68 /* Assets.xcassets */; };
 		4C49B0A7206F64FB00EE1B68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C49B0A5206F64FB00EE1B68 /* LaunchScreen.storyboard */; };
+		4C60EA28206F6F2C0015E766 /* port80.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4C60EA27206F6F2C0015E766 /* port80.jpg */; };
 		842763D32037C4B465F3CEDA /* Pods_WebServiceDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F19C336213B0D6E10821A02D /* Pods_WebServiceDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		4C49B0A3206F64FB00EE1B68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C49B0A6206F64FB00EE1B68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C49B0A8206F64FB00EE1B68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C60EA27206F6F2C0015E766 /* port80.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = port80.jpg; sourceTree = "<group>"; };
 		DBD155C0F930015EDB08714C /* Pods-WebServiceDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebServiceDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebServiceDemo/Pods-WebServiceDemo.release.xcconfig"; sourceTree = "<group>"; };
 		F19C336213B0D6E10821A02D /* Pods_WebServiceDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebServiceDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -61,6 +63,7 @@
 		4C49B09B206F64FB00EE1B68 /* WebServiceDemo */ = {
 			isa = PBXGroup;
 			children = (
+				4C60EA27206F6F2C0015E766 /* port80.jpg */,
 				4C49B09C206F64FB00EE1B68 /* AppDelegate.swift */,
 				4C49B09E206F64FB00EE1B68 /* ViewController.swift */,
 				4C49B0A0206F64FB00EE1B68 /* Main.storyboard */,
@@ -152,6 +155,7 @@
 			files = (
 				4C49B0A7206F64FB00EE1B68 /* LaunchScreen.storyboard in Resources */,
 				4C49B0A4206F64FB00EE1B68 /* Assets.xcassets in Resources */,
+				4C60EA28206F6F2C0015E766 /* port80.jpg in Resources */,
 				4C49B0A2206F64FB00EE1B68 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

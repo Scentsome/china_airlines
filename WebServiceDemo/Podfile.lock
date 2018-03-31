@@ -1,10 +1,12 @@
 PODS:
   - Alamofire (4.5.1)
   - Kanna (4.0.0)
+  - Zip (1.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - Kanna (from `https://github.com/tid-kijyun/Kanna.git`, branch `feature/v4.0.0`)
+  - Zip
 
 EXTERNAL SOURCES:
   Kanna:
@@ -19,7 +21,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   Kanna: d5ae2a26472f7e7a474e7f36a9cd8aa2c8c63ad3
+  Zip: 115a122433829a1bbf33f5575fa84047438dcc12
 
-PODFILE CHECKSUM: c53499a44a3177bffbf153958f3feaaa78d6f3fb
+PODFILE CHECKSUM: 90c65d116e05c47a5adaf72c35a10ce0a44a0aad
 
 COCOAPODS: 1.1.1

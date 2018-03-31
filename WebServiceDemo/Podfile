@@ -9,5 +9,6 @@ target 'WebServiceDemo' do
 
   # Pods for WebServiceDemo
   pod 'Alamofire', '~> 4.0'
+  pod 'Zip'
   pod "Kanna", :git => 'https://github.com/tid-kijyun/Kanna.git', :branch => 'feature/v4.0.0'
 end
