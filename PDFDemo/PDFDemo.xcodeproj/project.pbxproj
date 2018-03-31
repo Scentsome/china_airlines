@@ -15,6 +15,7 @@
 		4CE783C1206F28A3004A71B6 /* LearnToCode_1.1_introduction.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4CE783C0206F28A3004A71B6 /* LearnToCode_1.1_introduction.pdf */; };
 		4CE783C3206F2A72004A71B6 /* china_airlines_2018_print5.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4CE783C2206F2A72004A71B6 /* china_airlines_2018_print5.pdf */; };
 		4CE783C5206F2BE6004A71B6 /* ContractsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE783C4206F2BE6004A71B6 /* ContractsTableViewController.swift */; };
+		4CE783C7206F36A6004A71B6 /* contractTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4CE783C6206F36A6004A71B6 /* contractTemplate.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4CE783C0206F28A3004A71B6 /* LearnToCode_1.1_introduction.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = LearnToCode_1.1_introduction.pdf; sourceTree = "<group>"; };
 		4CE783C2206F2A72004A71B6 /* china_airlines_2018_print5.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = china_airlines_2018_print5.pdf; sourceTree = "<group>"; };
 		4CE783C4206F2BE6004A71B6 /* ContractsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractsTableViewController.swift; sourceTree = "<group>"; };
+		4CE783C6206F36A6004A71B6 /* contractTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = contractTemplate.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		4CE783AD206F280D004A71B6 /* PDFDemo */ = {
 			isa = PBXGroup;
 			children = (
+				4CE783C6206F36A6004A71B6 /* contractTemplate.pdf */,
 				4CE783C2206F2A72004A71B6 /* china_airlines_2018_print5.pdf */,
 				4CE783C0206F28A3004A71B6 /* LearnToCode_1.1_introduction.pdf */,
 				4CE783AE206F280D004A71B6 /* AppDelegate.swift */,
@@ -132,6 +135,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CE783C7206F36A6004A71B6 /* contractTemplate.pdf in Resources */,
 				4CE783C1206F28A3004A71B6 /* LearnToCode_1.1_introduction.pdf in Resources */,
 				4CE783B9206F280D004A71B6 /* LaunchScreen.storyboard in Resources */,
 				4CE783B6206F280D004A71B6 /* Assets.xcassets in Resources */,
