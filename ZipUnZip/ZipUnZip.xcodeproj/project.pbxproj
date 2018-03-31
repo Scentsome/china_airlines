@@ -12,6 +12,9 @@
 		4C49B07C206F3D2100EE1B68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C49B07A206F3D2100EE1B68 /* Main.storyboard */; };
 		4C49B07E206F3D2100EE1B68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C49B07D206F3D2100EE1B68 /* Assets.xcassets */; };
 		4C49B081206F3D2100EE1B68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C49B07F206F3D2100EE1B68 /* LaunchScreen.storyboard */; };
+		4C49B089206F592600EE1B68 /* item.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4C49B088206F592600EE1B68 /* item.xml */; };
+		4C49B08B206F595F00EE1B68 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C49B08A206F595F00EE1B68 /* Book.swift */; };
+		4C49B08F206F62CB00EE1B68 /* Json4Swift_Base 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C49B08E206F62CB00EE1B68 /* Json4Swift_Base 3.swift */; };
 		5A2A08546FCF8B4DFA199BE7 /* Pods_ZipUnZip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9FF41D41D8E0E7D654ECF0 /* Pods_ZipUnZip.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,9 @@
 		4C49B07D206F3D2100EE1B68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C49B080206F3D2100EE1B68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C49B082206F3D2100EE1B68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C49B088206F592600EE1B68 /* item.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = item.xml; sourceTree = "<group>"; };
+		4C49B08A206F595F00EE1B68 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		4C49B08E206F62CB00EE1B68 /* Json4Swift_Base 3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Json4Swift_Base 3.swift"; sourceTree = "<group>"; };
 		B49405F756299B0D67BD3084 /* Pods-ZipUnZip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZipUnZip.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZipUnZip/Pods-ZipUnZip.release.xcconfig"; sourceTree = "<group>"; };
 		CC9FF41D41D8E0E7D654ECF0 /* Pods_ZipUnZip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZipUnZip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB99529A5233465D61B16E3 /* Pods-ZipUnZip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZipUnZip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZipUnZip/Pods-ZipUnZip.debug.xcconfig"; sourceTree = "<group>"; };
@@ -71,11 +77,14 @@
 			isa = PBXGroup;
 			children = (
 				4C49B076206F3D2100EE1B68 /* AppDelegate.swift */,
+				4C49B08E206F62CB00EE1B68 /* Json4Swift_Base 3.swift */,
 				4C49B078206F3D2100EE1B68 /* ViewController.swift */,
 				4C49B07A206F3D2100EE1B68 /* Main.storyboard */,
 				4C49B07D206F3D2100EE1B68 /* Assets.xcassets */,
 				4C49B07F206F3D2100EE1B68 /* LaunchScreen.storyboard */,
 				4C49B082206F3D2100EE1B68 /* Info.plist */,
+				4C49B088206F592600EE1B68 /* item.xml */,
+				4C49B08A206F595F00EE1B68 /* Book.swift */,
 			);
 			path = ZipUnZip;
 			sourceTree = "<group>";
@@ -152,6 +161,7 @@
 			files = (
 				4C49B081206F3D2100EE1B68 /* LaunchScreen.storyboard in Resources */,
 				4C49B07E206F3D2100EE1B68 /* Assets.xcassets in Resources */,
+				4C49B089206F592600EE1B68 /* item.xml in Resources */,
 				4C49B07C206F3D2100EE1B68 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,6 +223,8 @@
 			files = (
 				4C49B079206F3D2100EE1B68 /* ViewController.swift in Sources */,
 				4C49B077206F3D2100EE1B68 /* AppDelegate.swift in Sources */,
+				4C49B08F206F62CB00EE1B68 /* Json4Swift_Base 3.swift in Sources */,
+				4C49B08B206F595F00EE1B68 /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
