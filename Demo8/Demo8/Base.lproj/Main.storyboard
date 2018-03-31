@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bv1-Oa-lTZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -35,29 +35,52 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="103.89805097451276"/>
         </scene>
-        <!--View Controller-->
+        <!--Draw Line View Controller-->
         <scene sceneID="a7b-g2-ZxB">
             <objects>
-                <viewController storyboardIdentifier="NextVC" id="bv1-Oa-lTZ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NextVC" id="bv1-Oa-lTZ" customClass="DrawLineViewController" customModule="Demo8" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="brX-vZ-EST">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7P3-an-Ncl">
-                                <rect key="frame" x="166" y="174" width="42" height="21"/>
+                                <rect key="frame" x="166" y="59" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home.png" translatesAutoresizingMaskIntoConstraints="NO" id="emp-1c-v5g">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQ5-wX-TB2">
+                                <rect key="frame" x="164" y="617" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="saveAction:" destination="bv1-Oa-lTZ" eventType="touchUpInside" id="KLO-8P-X6x"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="emp-1c-v5g" firstAttribute="trailing" secondItem="eaS-8m-H7e" secondAttribute="trailing" id="8Ha-Pu-Mf5"/>
+                            <constraint firstItem="eaS-8m-H7e" firstAttribute="bottom" secondItem="emp-1c-v5g" secondAttribute="bottom" constant="100" id="EL2-54-ClT"/>
+                            <constraint firstItem="emp-1c-v5g" firstAttribute="top" secondItem="brX-vZ-EST" secondAttribute="top" id="ifx-ZX-LO7"/>
+                            <constraint firstItem="emp-1c-v5g" firstAttribute="leading" secondItem="eaS-8m-H7e" secondAttribute="leading" id="kTE-wr-4cu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="eaS-8m-H7e"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="emp-1c-v5g" id="JeP-rA-a2U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9f-pp-ev9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1142" y="-275"/>
+            <point key="canvasLocation" x="1141.5999999999999" y="-275.71214392803603"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home.png" width="275" height="489"/>
+    </resources>
 </document>

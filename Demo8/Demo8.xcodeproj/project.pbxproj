@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C60EA2A206F787B0015E766 /* DrawLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C60EA29206F787B0015E766 /* DrawLineViewController.swift */; };
+		4C60EA2C206F79F40015E766 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C60EA2B206F79F30015E766 /* home.png */; };
 		4CE7838F206F1839004A71B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE7838E206F1839004A71B6 /* AppDelegate.swift */; };
 		4CE78391206F1839004A71B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE78390206F1839004A71B6 /* ViewController.swift */; };
 		4CE78394206F1839004A71B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE78392206F1839004A71B6 /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C60EA29206F787B0015E766 /* DrawLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawLineViewController.swift; sourceTree = "<group>"; };
+		4C60EA2B206F79F30015E766 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		4CE7838B206F1839004A71B6 /* Demo8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE7838E206F1839004A71B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CE78390206F1839004A71B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 		4CE7838D206F1839004A71B6 /* Demo8 */ = {
 			isa = PBXGroup;
 			children = (
+				4C60EA2B206F79F30015E766 /* home.png */,
 				4CE7838E206F1839004A71B6 /* AppDelegate.swift */,
 				4CE78390206F1839004A71B6 /* ViewController.swift */,
 				4CE78392206F1839004A71B6 /* Main.storyboard */,
@@ -63,6 +68,7 @@
 				4CE78397206F1839004A71B6 /* LaunchScreen.storyboard */,
 				4CE7839A206F1839004A71B6 /* Info.plist */,
 				4CE783A0206F1CCF004A71B6 /* hello.html */,
+				4C60EA29206F787B0015E766 /* DrawLineViewController.swift */,
 			);
 			path = Demo8;
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CE78399206F1839004A71B6 /* LaunchScreen.storyboard in Resources */,
+				4C60EA2C206F79F40015E766 /* home.png in Resources */,
 				4CE783A1206F1CCF004A71B6 /* hello.html in Resources */,
 				4CE78396206F1839004A71B6 /* Assets.xcassets in Resources */,
 				4CE78394206F1839004A71B6 /* Main.storyboard in Resources */,
@@ -141,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CE78391206F1839004A71B6 /* ViewController.swift in Sources */,
+				4C60EA2A206F787B0015E766 /* DrawLineViewController.swift in Sources */,
 				4CE7838F206F1839004A71B6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
