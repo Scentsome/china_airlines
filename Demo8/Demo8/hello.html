@@ -1,0 +1,44 @@
+<html>
+    <script>
+        
+        function createList(jsonString) {
+            var array = JSON.parse(jsonString);
+            for (var i=0;i<array.length;i++)
+            {
+                var li = document.createElement("li");
+                var t = document.createTextNode(array[i]);
+                var s = new String(array[i]);
+                li.appendChild(t);
+                li.onclick = (function(s){
+                              return function(){
+                              send(s.valueOf());
+                              }
+                              })(s);
+
+                
+                document.body.appendChild(li);
+            }
+        }
+    function send(itemName){
+        var message = {item: "test"}
+    window.webkit.messageHandlers.wkMessage.postMessage(itemName);
+    }
+    function backToVC(){
+       
+       var input = document.getElementById("input1")
+       window.webkit.messageHandlers.wkMessage.postMessage(input.value);
+    }
+    
+        </script>
+    
+    <style>
+        body{ font-size:100px}
+        li{ line-height: 150px}
+        input{ line-height: 150px}
+        </style>
+    
+    <body style="background-color:lightgrey;">
+        <input id="input1" type="text" value="hello" />
+        <input type="button" onClick="backToVC();"/>
+    </body>
+</html>
