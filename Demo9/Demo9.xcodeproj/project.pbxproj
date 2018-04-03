@@ -20,6 +20,7 @@
 		4C402FF520734B0300967020 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C402FEA20734B0300967020 /* AFHTTPSessionManager.m */; };
 		4C402FF620734B0300967020 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C402FEB20734B0300967020 /* AFURLSessionManager.m */; };
 		4C402FF820734CD200967020 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C402FF720734CD200967020 /* Circle.swift */; };
+		4C7B0EB32073606000415760 /* RecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7B0EB22073606000415760 /* RecorderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		4C402FEF20734B0300967020 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
 		4C402FF020734B0300967020 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
 		4C402FF720734CD200967020 /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
+		4C7B0EB22073606000415760 /* RecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				4C402FE02073432800967020 /* Rectangle.h */,
 				4C402FE12073432800967020 /* Rectangle.mm */,
 				4C402FDF2073432800967020 /* Demo9-Bridging-Header.h */,
+				4C7B0EB22073606000415760 /* RecorderViewController.swift */,
 			);
 			path = Demo9;
 			sourceTree = "<group>";
@@ -148,6 +151,11 @@
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -191,6 +199,7 @@
 				4C402FF420734B0300967020 /* AFSecurityPolicy.m in Sources */,
 				4C402FD0207342F700967020 /* ViewController.swift in Sources */,
 				4C402FCE207342F700967020 /* AppDelegate.swift in Sources */,
+				4C7B0EB32073606000415760 /* RecorderViewController.swift in Sources */,
 				4C402FF220734B0300967020 /* AFURLRequestSerialization.m in Sources */,
 				4C402FF820734CD200967020 /* Circle.swift in Sources */,
 				4C402FF120734B0300967020 /* AFURLResponseSerialization.m in Sources */,
