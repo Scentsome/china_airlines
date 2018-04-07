@@ -26,6 +26,9 @@
                                 <rect key="frame" x="162" y="275" width="51" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Launch"/>
+                                <connections>
+                                    <action selector="launchStoryboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rnC-5I-Jhp"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Launch iPhone ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRT-Sn-t2G">
                                 <rect key="frame" x="90" y="66" width="195" height="21"/>
@@ -39,6 +42,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="launchSwitch" destination="cei-Bp-AVV" id="7Dg-9K-2nY"/>
                         <segue destination="ssm-nR-Ijs" kind="show" identifier="toPhoneSegue" id="UV3-tq-T2F"/>
                         <segue destination="bmp-Il-Sca" kind="show" identifier="toPadSegue" id="2xP-Ut-a5H"/>
                     </connections>

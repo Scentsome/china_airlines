@@ -10,6 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var launchSwitch: UISwitch!
+    
+    @IBAction func launchStoryboard(_ sender: Any) {
+        
+        if launchSwitch.isOn {
+            performSegue(withIdentifier: "toPhoneSegue", sender: sender)
+        }else {
+            performSegue(withIdentifier: "toPadSegue", sender: sender)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
