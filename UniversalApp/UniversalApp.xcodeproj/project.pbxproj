@@ -13,6 +13,7 @@
 		4C8EC03D20788E26005948C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C8EC03C20788E26005948C3 /* Assets.xcassets */; };
 		4C8EC04020788E26005948C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C8EC03E20788E26005948C3 /* LaunchScreen.storyboard */; };
 		4C8EC04820789228005948C3 /* Phone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C8EC04720789228005948C3 /* Phone.storyboard */; };
+		4C8EC04B207892F4005948C3 /* Pad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C8EC049207892F4005948C3 /* Pad.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4C8EC03F20788E26005948C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C8EC04120788E26005948C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C8EC04720789228005948C3 /* Phone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Phone.storyboard; sourceTree = "<group>"; };
+		4C8EC04A207892F4005948C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = UniversalApp/Base.lproj/Pad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		4C8EC02920788E26005948C3 = {
 			isa = PBXGroup;
 			children = (
+				4C8EC049207892F4005948C3 /* Pad.storyboard */,
 				4C8EC04720789228005948C3 /* Phone.storyboard */,
 				4C8EC03420788E26005948C3 /* UniversalApp */,
 				4C8EC03320788E26005948C3 /* Products */,
@@ -129,6 +132,7 @@
 				4C8EC04020788E26005948C3 /* LaunchScreen.storyboard in Resources */,
 				4C8EC04820789228005948C3 /* Phone.storyboard in Resources */,
 				4C8EC03D20788E26005948C3 /* Assets.xcassets in Resources */,
+				4C8EC04B207892F4005948C3 /* Pad.storyboard in Resources */,
 				4C8EC03B20788E26005948C3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,6 +166,14 @@
 				4C8EC03F20788E26005948C3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4C8EC049207892F4005948C3 /* Pad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C8EC04A207892F4005948C3 /* Base */,
+			);
+			name = Pad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

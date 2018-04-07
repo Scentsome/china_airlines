@@ -40,12 +40,36 @@
                     </view>
                     <connections>
                         <segue destination="ssm-nR-Ijs" kind="show" identifier="toPhoneSegue" id="UV3-tq-T2F"/>
-                        <segue destination="bmp-Il-Sca" kind="show" identifier="toPadSegue" id="2xP-Ut-a5H"/>
+                        <segue destination="eoN-S7-nQZ" kind="show" identifier="toPadSegue" id="2xP-Ut-a5H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Nwp-Dt-g5l">
+            <objects>
+                <viewController id="eoN-S7-nQZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bTt-vV-Ddt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iPad View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEg-sQ-Dxi">
+                                <rect key="frame" x="150" y="323" width="75" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="YUb-Ol-Zyh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wd2-XW-SQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938" y="437"/>
         </scene>
         <!--Phone-->
         <scene sceneID="6LY-aI-IqP">
@@ -54,14 +78,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJk-1S-mHh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="938.39999999999998" y="-229.83508245877064"/>
-        </scene>
-        <!--Pad-->
-        <scene sceneID="uqH-Uo-QMv">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Pad" id="bmp-Il-Sca" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Jx-33-8kA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="938" y="437"/>
         </scene>
     </scenes>
 </document>
