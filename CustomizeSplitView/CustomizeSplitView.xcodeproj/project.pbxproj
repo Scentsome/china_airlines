@@ -12,6 +12,8 @@
 		4C8EC05E2079C555005948C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C8EC05C2079C555005948C3 /* Main.storyboard */; };
 		4C8EC0602079C555005948C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C8EC05F2079C555005948C3 /* Assets.xcassets */; };
 		4C8EC0632079C555005948C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C8EC0612079C555005948C3 /* LaunchScreen.storyboard */; };
+		4C8EC06B2079D598005948C3 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8EC06A2079D598005948C3 /* LeftViewController.swift */; };
+		4C8EC06D2079D5FA005948C3 /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8EC06C2079D5FA005948C3 /* RightViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		4C8EC05F2079C555005948C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C8EC0622079C555005948C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C8EC0642079C555005948C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C8EC06A2079D598005948C3 /* LeftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		4C8EC06C2079D5FA005948C3 /* RightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				4C8EC05F2079C555005948C3 /* Assets.xcassets */,
 				4C8EC0612079C555005948C3 /* LaunchScreen.storyboard */,
 				4C8EC0642079C555005948C3 /* Info.plist */,
+				4C8EC06A2079D598005948C3 /* LeftViewController.swift */,
+				4C8EC06C2079D5FA005948C3 /* RightViewController.swift */,
 			);
 			path = CustomizeSplitView;
 			sourceTree = "<group>";
@@ -136,6 +142,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C8EC06B2079D598005948C3 /* LeftViewController.swift in Sources */,
+				4C8EC06D2079D5FA005948C3 /* RightViewController.swift in Sources */,
 				4C8EC05B2079C555005948C3 /* ViewController.swift in Sources */,
 				4C8EC0592079C555005948C3 /* AppDelegate.swift in Sources */,
 			);
