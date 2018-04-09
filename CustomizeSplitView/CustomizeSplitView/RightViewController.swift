@@ -9,8 +9,13 @@
 import UIKit
 
 class RightViewController: UIViewController {
+    
 
     @IBOutlet weak var dataLabel: UILabel!
+    
+    func updateLabel(byData:String) {
+        dataLabel.text = byData
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

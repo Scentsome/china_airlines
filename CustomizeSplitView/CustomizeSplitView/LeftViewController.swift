@@ -9,7 +9,7 @@
 import UIKit
 
 class LeftViewController: UIViewController {
-
+    var dataList = ["a","b","c","d","e"]
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,4 +33,22 @@ class LeftViewController: UIViewController {
     }
     */
 
+}
+
+extension LeftViewController : UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataList.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LeftCell")
+        cell?.textLabel?.text = dataList[indexPath.row]
+        return cell!
+    }
+}
+extension LeftViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedData = dataList[indexPath.row]
+        guard let rightVC = parent?.childViewControllers[1] as? RightViewController else {return}
+        rightVC.updateLabel(byData: selectedData)
+    }
 }
