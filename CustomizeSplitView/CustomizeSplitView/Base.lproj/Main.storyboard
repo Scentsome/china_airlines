@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad9_7" orientation="portrait">
+    <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,27 +16,28 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomizeSplitView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFP-kG-EUx" userLabel="Left View">
-                                <rect key="frame" x="0.0" y="100" width="230.5" height="924"/>
-                                <connections>
-                                    <segue destination="tW7-gM-Fdt" kind="embed" id="XyH-Xb-a8Z"/>
-                                </connections>
-                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E2L-be-Ylh" userLabel="Right View">
-                                <rect key="frame" x="230.5" y="100" width="537.5" height="924"/>
+                                <rect key="frame" x="307" y="100" width="717" height="668"/>
+                                <color key="backgroundColor" red="0.3460690173" green="0.83335186019999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="nLi-i8-MTb" kind="embed" id="ede-Zr-xJp"/>
                                 </connections>
                             </containerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fzO-uL-lFi">
-                                <rect key="frame" x="0.0" y="20" width="768" height="80"/>
+                                <rect key="frame" x="0.0" y="20" width="1024" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="xAi-GV-LTC"/>
                                 </constraints>
                             </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFP-kG-EUx" userLabel="Left View">
+                                <rect key="frame" x="0.0" y="100" width="307" height="668"/>
+                                <connections>
+                                    <segue destination="tW7-gM-Fdt" kind="embed" id="XyH-Xb-a8Z"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -64,7 +65,7 @@
             <objects>
                 <viewController storyboardIdentifier="LeftVC" id="tW7-gM-Fdt" customClass="LeftViewController" customModule="CustomizeSplitView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6xt-ft-4FT">
-                        <rect key="frame" x="0.0" y="0.0" width="230.5" height="924"/>
+                        <rect key="frame" x="0.0" y="0.0" width="307" height="668"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KQr-RK-HMn">
@@ -87,7 +88,8 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="FIW-Dr-mbd"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="KQr-RK-HMn" id="bhP-zD-PzW"/>
@@ -102,7 +104,7 @@
             <objects>
                 <viewController storyboardIdentifier="RightVC" id="nLi-i8-MTb" customClass="RightViewController" customModule="CustomizeSplitView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e0X-7K-tlD">
-                        <rect key="frame" x="0.0" y="0.0" width="537.5" height="924"/>
+                        <rect key="frame" x="0.0" y="0.0" width="717" height="668"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vve-ud-aIY">
@@ -113,7 +115,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="smd-sg-A4N"/>
                     </view>
                     <connections>
                         <outlet property="dataLabel" destination="Vve-ud-aIY" id="vo7-Rm-PUI"/>
