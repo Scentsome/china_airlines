@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Root Pad View Controller-->
         <scene sceneID="Nwp-Dt-g5l">
             <objects>
-                <viewController id="eoN-S7-nQZ" sceneMemberID="viewController">
+                <viewController id="eoN-S7-nQZ" customClass="RootPadViewController" customModule="UniversalApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bTt-vV-Ddt">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,13 @@
                         <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="YUb-Ol-Zyh"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fZH-Jy-Hyw"/>
+                    <navigationItem key="navigationItem" id="fZH-Jy-Hyw">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="olk-NB-tsj">
+                            <connections>
+                                <action selector="logout:" destination="eoN-S7-nQZ" id="cEl-x2-8rN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wd2-XW-SQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
