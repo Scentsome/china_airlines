@@ -24,6 +24,7 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="presentOrange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iUD-rc-bTa"/>
+                                    <segue destination="zUV-Jc-N7h" kind="show" id="qjT-yr-OdE"/>
                                 </connections>
                             </button>
                         </subviews>
