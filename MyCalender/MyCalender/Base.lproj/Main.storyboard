@@ -87,11 +87,27 @@
                         <outlet property="menuView" destination="AHj-oO-WNL" id="bbA-ld-rCK"/>
                         <outlet property="monthLabel" destination="rtS-LX-WW3" id="XAN-fi-uzd"/>
                         <outlet property="titleLabel" destination="DVL-b4-0AH" id="vrU-5l-bk6"/>
+                        <segue destination="sQ9-m4-Rd6" kind="show" id="IKY-cn-Jnq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aBM-3C-kQX">
+            <objects>
+                <viewController id="sQ9-m4-Rd6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aDY-zB-z9H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="1i6-PD-b5N"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OeX-qF-xyE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="994" y="-214"/>
         </scene>
     </scenes>
 </document>

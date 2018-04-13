@@ -35,10 +35,7 @@ class ViewController: UIViewController {
         menuView.commitMenuViewUpdate()
         calendarView.commitCalendarViewUpdate()
         
-        let date =  Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "YYYY MMM"
-        monthLabel.text = formatter.string(from: date)
+        updateMonthLabel(date:Date())
     }
 
     override func viewWillLayoutSubviews() {
@@ -99,18 +96,20 @@ extension ViewController : CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
     
     
     func didShowNextMonthView(_ date: Date) {
-        
+
+        updateMonthLabel(date: date)
+
+    }
+
+    private func updateMonthLabel(date: Date) {
         let formatter = DateFormatter()
         formatter.dateFormat = "YYYY MMM"
         monthLabel.text = formatter.string(from: date)
-        
     }
-    
+
     func didShowPreviousMonthView(_ date: Date) {
         
-        let formatter = DateFormatter()
-        formatter.dateFormat = "YYYY MMM"
-        monthLabel.text = formatter.string(from: date)
+        updateMonthLabel(date:date)
     }
     
 }
