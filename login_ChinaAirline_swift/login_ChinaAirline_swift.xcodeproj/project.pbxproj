@@ -1,0 +1,432 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		464A90425F07E8278D37C359 /* Pods_login_ChinaAirline_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22105F57788810D959C3006F /* Pods_login_ChinaAirline_swift.framework */; };
+		87693E85207DA78300B16497 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87693E84207DA78300B16497 /* AppDelegate.swift */; };
+		87693E87207DA78300B16497 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87693E86207DA78300B16497 /* ViewController.swift */; };
+		87693E8A207DA78300B16497 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87693E88207DA78300B16497 /* Main.storyboard */; };
+		87693E8C207DA78300B16497 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87693E8B207DA78300B16497 /* Assets.xcassets */; };
+		87693E8F207DA78300B16497 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87693E8D207DA78300B16497 /* LaunchScreen.storyboard */; };
+		87693E98207DA8D100B16497 /* iPadVersion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87693E96207DA8D100B16497 /* iPadVersion.storyboard */; };
+		87693E9A207DA8E600B16497 /* iPhoneVersion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87693E99207DA8E600B16497 /* iPhoneVersion.storyboard */; };
+		87693E9C207DA94700B16497 /* Soap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87693E9B207DA94600B16497 /* Soap.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		22105F57788810D959C3006F /* Pods_login_ChinaAirline_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_login_ChinaAirline_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38609B516831F755D9134EAE /* Pods-login_ChinaAirline_swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-login_ChinaAirline_swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-login_ChinaAirline_swift/Pods-login_ChinaAirline_swift.release.xcconfig"; sourceTree = "<group>"; };
+		625D78840DBC67F21504D573 /* Pods-login_ChinaAirline_swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-login_ChinaAirline_swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-login_ChinaAirline_swift/Pods-login_ChinaAirline_swift.debug.xcconfig"; sourceTree = "<group>"; };
+		87693E81207DA78300B16497 /* login_ChinaAirline_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = login_ChinaAirline_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87693E84207DA78300B16497 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		87693E86207DA78300B16497 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		87693E89207DA78300B16497 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		87693E8B207DA78300B16497 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87693E8E207DA78300B16497 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		87693E90207DA78300B16497 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87693E97207DA8D100B16497 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = login_ChinaAirline_swift/Base.lproj/iPadVersion.storyboard; sourceTree = "<group>"; };
+		87693E99207DA8E600B16497 /* iPhoneVersion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhoneVersion.storyboard; path = login_ChinaAirline_swift/Base.lproj/iPhoneVersion.storyboard; sourceTree = "<group>"; };
+		87693E9B207DA94600B16497 /* Soap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Soap.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87693E7E207DA78300B16497 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				464A90425F07E8278D37C359 /* Pods_login_ChinaAirline_swift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6685A387E4F7170E31632DD5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				625D78840DBC67F21504D573 /* Pods-login_ChinaAirline_swift.debug.xcconfig */,
+				38609B516831F755D9134EAE /* Pods-login_ChinaAirline_swift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		87693E78207DA78300B16497 = {
+			isa = PBXGroup;
+			children = (
+				87693E99207DA8E600B16497 /* iPhoneVersion.storyboard */,
+				87693E96207DA8D100B16497 /* iPadVersion.storyboard */,
+				87693E83207DA78300B16497 /* login_ChinaAirline_swift */,
+				87693E82207DA78300B16497 /* Products */,
+				6685A387E4F7170E31632DD5 /* Pods */,
+				E2219DB9E9F9367828BE198E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		87693E82207DA78300B16497 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87693E81207DA78300B16497 /* login_ChinaAirline_swift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87693E83207DA78300B16497 /* login_ChinaAirline_swift */ = {
+			isa = PBXGroup;
+			children = (
+				87693E84207DA78300B16497 /* AppDelegate.swift */,
+				87693E86207DA78300B16497 /* ViewController.swift */,
+				87693E88207DA78300B16497 /* Main.storyboard */,
+				87693E8B207DA78300B16497 /* Assets.xcassets */,
+				87693E8D207DA78300B16497 /* LaunchScreen.storyboard */,
+				87693E90207DA78300B16497 /* Info.plist */,
+				87693E9B207DA94600B16497 /* Soap.swift */,
+			);
+			path = login_ChinaAirline_swift;
+			sourceTree = "<group>";
+		};
+		E2219DB9E9F9367828BE198E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22105F57788810D959C3006F /* Pods_login_ChinaAirline_swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		87693E80207DA78300B16497 /* login_ChinaAirline_swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87693E93207DA78300B16497 /* Build configuration list for PBXNativeTarget "login_ChinaAirline_swift" */;
+			buildPhases = (
+				C492B2859A860625CF9C28B2 /* [CP] Check Pods Manifest.lock */,
+				87693E7D207DA78300B16497 /* Sources */,
+				87693E7E207DA78300B16497 /* Frameworks */,
+				87693E7F207DA78300B16497 /* Resources */,
+				6815AAA9BD3FBEA566A2E2E2 /* [CP] Embed Pods Frameworks */,
+				5804FCA1112BCDC4013B5783 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = login_ChinaAirline_swift;
+			productName = login_ChinaAirline_swift;
+			productReference = 87693E81207DA78300B16497 /* login_ChinaAirline_swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		87693E79207DA78300B16497 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = cora;
+				TargetAttributes = {
+					87693E80207DA78300B16497 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 87693E7C207DA78300B16497 /* Build configuration list for PBXProject "login_ChinaAirline_swift" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 87693E78207DA78300B16497;
+			productRefGroup = 87693E82207DA78300B16497 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87693E80207DA78300B16497 /* login_ChinaAirline_swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		87693E7F207DA78300B16497 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87693E8F207DA78300B16497 /* LaunchScreen.storyboard in Resources */,
+				87693E98207DA8D100B16497 /* iPadVersion.storyboard in Resources */,
+				87693E9A207DA8E600B16497 /* iPhoneVersion.storyboard in Resources */,
+				87693E8C207DA78300B16497 /* Assets.xcassets in Resources */,
+				87693E8A207DA78300B16497 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5804FCA1112BCDC4013B5783 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-login_ChinaAirline_swift/Pods-login_ChinaAirline_swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6815AAA9BD3FBEA566A2E2E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-login_ChinaAirline_swift/Pods-login_ChinaAirline_swift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kanna/Kanna.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kanna.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-login_ChinaAirline_swift/Pods-login_ChinaAirline_swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C492B2859A860625CF9C28B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-login_ChinaAirline_swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		87693E7D207DA78300B16497 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87693E9C207DA94700B16497 /* Soap.swift in Sources */,
+				87693E87207DA78300B16497 /* ViewController.swift in Sources */,
+				87693E85207DA78300B16497 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		87693E88207DA78300B16497 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87693E89207DA78300B16497 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		87693E8D207DA78300B16497 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87693E8E207DA78300B16497 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		87693E96207DA8D100B16497 /* iPadVersion.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87693E97207DA8D100B16497 /* Base */,
+			);
+			name = iPadVersion.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		87693E91207DA78300B16497 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		87693E92207DA78300B16497 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		87693E94207DA78300B16497 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 625D78840DBC67F21504D573 /* Pods-login_ChinaAirline_swift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T59TDK9D3N;
+				INFOPLIST_FILE = login_ChinaAirline_swift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zencher.cora.login-ChinaAirline-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		87693E95207DA78300B16497 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38609B516831F755D9134EAE /* Pods-login_ChinaAirline_swift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T59TDK9D3N;
+				INFOPLIST_FILE = login_ChinaAirline_swift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zencher.cora.login-ChinaAirline-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		87693E7C207DA78300B16497 /* Build configuration list for PBXProject "login_ChinaAirline_swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87693E91207DA78300B16497 /* Debug */,
+				87693E92207DA78300B16497 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87693E93207DA78300B16497 /* Build configuration list for PBXNativeTarget "login_ChinaAirline_swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87693E94207DA78300B16497 /* Debug */,
+				87693E95207DA78300B16497 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 87693E79207DA78300B16497 /* Project object */;
+}

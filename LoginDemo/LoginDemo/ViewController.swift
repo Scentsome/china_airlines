@@ -9,7 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var empNoTextfield: UITextField!
+    
+    @IBOutlet weak var pwdTextfield: UITextField!
+    
+    @IBOutlet weak var syspwdTextfield: UITextField!
+    
+    
+    @IBAction func login(_ sender: Any) {
+        
+        if empNoTextfield.text! != "" && pwdTextfield.text! != "" && syspwdTextfield.text! != "" {
+            
+        }else {
+            
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

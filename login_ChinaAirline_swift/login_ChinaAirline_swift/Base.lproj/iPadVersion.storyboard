@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6fO-VE-enF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--iPad-->
+        <scene sceneID="xoA-xf-UhD">
+            <objects>
+                <viewController title="iPad" id="6fO-VE-enF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rii-oU-9bV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tl-uB-ntX">
+                                <rect key="frame" x="148" y="323" width="79" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="259-Wo-cZT"/>
+                                    <constraint firstAttribute="width" constant="79" id="tyv-gJ-77a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.21378348210000001" green="0.74394531249999996" blue="0.63749999999999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="8Tl-uB-ntX" firstAttribute="centerX" secondItem="Rii-oU-9bV" secondAttribute="centerX" id="7fF-tV-x2L"/>
+                            <constraint firstItem="8Tl-uB-ntX" firstAttribute="centerY" secondItem="Rii-oU-9bV" secondAttribute="centerY" id="Spn-MY-rvq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HyE-EI-HO3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hUs-7n-oe2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1327" y="-262"/>
+        </scene>
+    </scenes>
+</document>
