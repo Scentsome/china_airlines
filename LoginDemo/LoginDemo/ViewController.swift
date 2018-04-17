@@ -42,6 +42,19 @@ class ViewController: UIViewController {
                         if resultNode != nil {
                             let result:String = (resultNode?.text)!
                             print(result)
+                            
+                            if result == "true" {
+                                
+                                switch UIDevice.current.userInterfaceIdiom {
+                                case .phone:
+                                    self.performSegue(withIdentifier: "toiPhoneSegue", sender: nil)
+                                case .pad:
+                                    self.performSegue(withIdentifier: "toiPadSegue", sender: nil)
+                                default:
+                                    break
+                                }
+                            }
+
                         }
                     } catch {
                         print("Parser Error")

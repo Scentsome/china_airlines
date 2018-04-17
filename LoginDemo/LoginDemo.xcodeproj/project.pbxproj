@@ -8,23 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		2A230465B385607290197219 /* Pods_LoginDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1ACD1C70D84D63C889F09F /* Pods_LoginDemo.framework */; };
+		4C0543A02081A4C0008DF918 /* Phone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C05439F2081A4C0008DF918 /* Phone.storyboard */; };
+		4C0543A22081A513008DF918 /* Pad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C0543A12081A513008DF918 /* Pad.storyboard */; };
 		4C45A68520818BE000F0C481 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C45A68420818BE000F0C481 /* AppDelegate.swift */; };
 		4C45A68720818BE000F0C481 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C45A68620818BE000F0C481 /* ViewController.swift */; };
-		4C45A68A20818BE000F0C481 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C45A68820818BE000F0C481 /* Main.storyboard */; };
 		4C45A68C20818BE000F0C481 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C45A68B20818BE000F0C481 /* Assets.xcassets */; };
 		4C45A68F20818BE000F0C481 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C45A68D20818BE000F0C481 /* LaunchScreen.storyboard */; };
 		4C45A6972081906900F0C481 /* Soap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C45A6962081906900F0C481 /* Soap.swift */; };
+		4C45A69C2081A37300F0C481 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C45A69B2081A37300F0C481 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C05439F2081A4C0008DF918 /* Phone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Phone.storyboard; sourceTree = "<group>"; };
+		4C0543A12081A513008DF918 /* Pad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Pad.storyboard; sourceTree = SOURCE_ROOT; };
 		4C45A68120818BE000F0C481 /* LoginDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C45A68420818BE000F0C481 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C45A68620818BE000F0C481 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4C45A68920818BE000F0C481 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C45A68B20818BE000F0C481 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C45A68E20818BE000F0C481 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C45A69020818BE000F0C481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C45A6962081906900F0C481 /* Soap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Soap.swift; path = ../../login_ChinaAirline_swift/login_ChinaAirline_swift/Soap.swift; sourceTree = "<group>"; };
+		4C45A69B2081A37300F0C481 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = SOURCE_ROOT; };
 		804892347238A0EFF89FF126 /* Pods-LoginDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginDemo/Pods-LoginDemo.release.xcconfig"; sourceTree = "<group>"; };
 		8B1ACD1C70D84D63C889F09F /* Pods_LoginDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB53715BE71960E6FCFAA699 /* Pods-LoginDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoginDemo/Pods-LoginDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,10 +84,12 @@
 		4C45A68320818BE000F0C481 /* LoginDemo */ = {
 			isa = PBXGroup;
 			children = (
+				4C45A69B2081A37300F0C481 /* Main.storyboard */,
+				4C0543A12081A513008DF918 /* Pad.storyboard */,
+				4C05439F2081A4C0008DF918 /* Phone.storyboard */,
 				4C45A6962081906900F0C481 /* Soap.swift */,
 				4C45A68420818BE000F0C481 /* AppDelegate.swift */,
 				4C45A68620818BE000F0C481 /* ViewController.swift */,
-				4C45A68820818BE000F0C481 /* Main.storyboard */,
 				4C45A68B20818BE000F0C481 /* Assets.xcassets */,
 				4C45A68D20818BE000F0C481 /* LaunchScreen.storyboard */,
 				4C45A69020818BE000F0C481 /* Info.plist */,
@@ -153,9 +159,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C45A69C2081A37300F0C481 /* Main.storyboard in Resources */,
+				4C0543A02081A4C0008DF918 /* Phone.storyboard in Resources */,
 				4C45A68F20818BE000F0C481 /* LaunchScreen.storyboard in Resources */,
+				4C0543A22081A513008DF918 /* Pad.storyboard in Resources */,
 				4C45A68C20818BE000F0C481 /* Assets.xcassets in Resources */,
-				4C45A68A20818BE000F0C481 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,14 +239,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4C45A68820818BE000F0C481 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4C45A68920818BE000F0C481 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4C45A68D20818BE000F0C481 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
