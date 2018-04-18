@@ -19,28 +19,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tdV-gp-PdD">
-                                <rect key="frame" x="2.5" y="148.5" width="370" height="370"/>
+                                <rect key="frame" x="0.0" y="140" width="375" height="387"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="370" id="vk7-H9-fns"/>
-                                    <constraint firstAttribute="width" constant="370" id="wvF-gh-40l"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VIB-XM-Cx9">
-                                    <size key="itemSize" width="100" height="88"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
+                                <collectionViewLayout key="collectionViewLayout" id="pLx-Vp-d6x" customClass="CustomCollectionViewLayout" customModule="CrewCollectionDemo" customModuleProvider="target"/>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="WBI-Uk-dIw" customClass="ContentCollectionViewCell" customModule="CrewCollectionDemo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="88"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="94" height="87"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="88"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="94" height="87"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXM-4c-P2R">
-                                                    <rect key="frame" x="29" y="34" width="42" height="21"/>
+                                                    <rect key="frame" x="26" y="33" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -49,9 +40,10 @@
                                         </view>
                                         <color key="backgroundColor" red="0.3800512519" green="1" blue="0.95482814699999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="oXM-4c-P2R" firstAttribute="centerY" secondItem="WBI-Uk-dIw" secondAttribute="centerY" id="unk-Mv-JTS"/>
-                                            <constraint firstItem="oXM-4c-P2R" firstAttribute="centerX" secondItem="WBI-Uk-dIw" secondAttribute="centerX" id="vR1-A6-O7N"/>
+                                            <constraint firstItem="oXM-4c-P2R" firstAttribute="centerY" secondItem="WBI-Uk-dIw" secondAttribute="centerY" id="M7j-ng-z0O"/>
+                                            <constraint firstItem="oXM-4c-P2R" firstAttribute="centerX" secondItem="WBI-Uk-dIw" secondAttribute="centerX" id="SLJ-Un-YRr"/>
                                         </constraints>
+                                        <size key="customSize" width="94" height="87"/>
                                         <connections>
                                             <outlet property="contentLabel" destination="oXM-4c-P2R" id="Ud5-oM-LVR"/>
                                         </connections>
@@ -64,11 +56,18 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="tdV-gp-PdD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DL4-5J-3Kj"/>
-                            <constraint firstItem="tdV-gp-PdD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ttf-By-zmn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tdV-gp-PdD" secondAttribute="bottom" constant="140" id="35b-Br-EXu"/>
+                            <constraint firstItem="tdV-gp-PdD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="8c8-YN-M4B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tdV-gp-PdD" secondAttribute="trailing" id="PPo-7Q-LGC"/>
+                            <constraint firstItem="tdV-gp-PdD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TTc-p0-CTt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="tdV-gp-PdD" id="NeA-M3-TKz"/>
+                        <outlet property="lowerConstraint" destination="35b-Br-EXu" id="CoE-YP-Mxb"/>
+                        <outlet property="upperConstraint" destination="8c8-YN-M4B" id="VNx-Cy-WQJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
