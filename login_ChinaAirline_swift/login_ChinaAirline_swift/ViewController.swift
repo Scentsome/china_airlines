@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import Kanna
+import CoreData
 
 class ViewController: UIViewController {
     
@@ -17,9 +18,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var pwdTextField: UITextField!
     
     @IBOutlet weak var syspwdTextField: UITextField!
+    var userData:[String:String] = [:]
+
     
     @IBAction func loginAction(_ sender: Any) {
-        
+        print(NSHomeDirectory())
         if empNoTextField.text != nil && pwdTextField.text != nil && syspwdTextField.text != nil {
             
             let empNo:String = empNoTextField.text!
@@ -40,7 +43,35 @@ class ViewController: UIViewController {
                     do{
                         let doc = try Kanna.XML(xml: data, encoding: .utf8)
                         
+                        
+                        
                         let resultNode = doc.at_xpath("//soap:result", namespaces: ["soap":"http://tempuri.org/"])
+                        
+                        
+                        
+                        let children = doc.xpath("//soap:LoginCheckXMLResult/child::node()",namespaces: ["soap":"http://tempuri.org/"])
+                        for child in children {
+                            
+                            self.userData[child.tagName!] = child.content
+                        }
+                        print(self.userData)
+                        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                        let context = appDelegate.persistentContainer.viewContext
+                        let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
+                        let newUser = User(entity: entity!, insertInto: context)
+                        newUser.cname = self.userData["cname"]
+                        newUser.ename = self.userData["ename"]
+                        newUser.sitacode = self.userData["sitacode"]
+                        newUser.email = self.userData["email"]
+                        newUser.code = self.userData["code"]
+                        newUser.empno = self.userData["empno"]
+                        do {
+                            try context.save()
+                        } catch {
+                            print("Failed saving")
+                        }
+                        
+                        
                         
                         if resultNode != nil {
                             let result:String = (resultNode?.text)!
@@ -78,6 +109,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name.UIApplicationDidEnterBackground , object: nil, queue: nil) { (notification) in
+            print("enter background in view controller")
+        }
     }
 
     override func didReceiveMemoryWarning() {

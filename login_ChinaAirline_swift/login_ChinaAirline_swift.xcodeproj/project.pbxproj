@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		464A90425F07E8278D37C359 /* Pods_login_ChinaAirline_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22105F57788810D959C3006F /* Pods_login_ChinaAirline_swift.framework */; };
+		4C8EC79320887DBD0094F26A /* UserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C8EC79120887DBD0094F26A /* UserData.xcdatamodeld */; };
 		87693E85207DA78300B16497 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87693E84207DA78300B16497 /* AppDelegate.swift */; };
 		87693E87207DA78300B16497 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87693E86207DA78300B16497 /* ViewController.swift */; };
 		87693E8A207DA78300B16497 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87693E88207DA78300B16497 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		22105F57788810D959C3006F /* Pods_login_ChinaAirline_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_login_ChinaAirline_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38609B516831F755D9134EAE /* Pods-login_ChinaAirline_swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-login_ChinaAirline_swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-login_ChinaAirline_swift/Pods-login_ChinaAirline_swift.release.xcconfig"; sourceTree = "<group>"; };
+		4C8EC79220887DBD0094F26A /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
 		625D78840DBC67F21504D573 /* Pods-login_ChinaAirline_swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-login_ChinaAirline_swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-login_ChinaAirline_swift/Pods-login_ChinaAirline_swift.debug.xcconfig"; sourceTree = "<group>"; };
 		87693E81207DA78300B16497 /* login_ChinaAirline_swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = login_ChinaAirline_swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87693E84207DA78300B16497 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				87693E8D207DA78300B16497 /* LaunchScreen.storyboard */,
 				87693E90207DA78300B16497 /* Info.plist */,
 				87693E9B207DA94600B16497 /* Soap.swift */,
+				4C8EC79120887DBD0094F26A /* UserData.xcdatamodeld */,
 			);
 			path = login_ChinaAirline_swift;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			files = (
 				87693E9C207DA94700B16497 /* Soap.swift in Sources */,
 				87693E87207DA78300B16497 /* ViewController.swift in Sources */,
+				4C8EC79320887DBD0094F26A /* UserData.xcdatamodeld in Sources */,
 				87693E85207DA78300B16497 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +431,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4C8EC79120887DBD0094F26A /* UserData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4C8EC79220887DBD0094F26A /* UserData.xcdatamodel */,
+			);
+			currentVersion = 4C8EC79220887DBD0094F26A /* UserData.xcdatamodel */;
+			path = UserData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 87693E79207DA78300B16497 /* Project object */;
 }

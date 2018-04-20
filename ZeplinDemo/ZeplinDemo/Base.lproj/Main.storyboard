@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ZeplinDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kns-dm-tWx">
+                                <rect key="frame" x="38" y="200" width="90" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Test" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xtm-Xz-idw">
+                                <rect key="frame" x="38" y="273" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="A8Q-Tg-S9T"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BP8-Zo-fze">
+                                <rect key="frame" x="38" y="333" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="9sm-Ia-KGO"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nTo-IW-zdu" userLabel="backView">
+                                <rect key="frame" x="158.5" y="403" width="58" height="58"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epc-1b-7ag">
+                                        <rect key="frame" x="0.0" y="0.0" width="58" height="58"/>
+                                        <state key="normal" title="Login" backgroundImage="oval"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="E8x-yR-Vvx"/>
+                                    <constraint firstItem="Epc-1b-7ag" firstAttribute="centerX" secondItem="nTo-IW-zdu" secondAttribute="centerX" id="HNH-XM-Oaq"/>
+                                    <constraint firstAttribute="height" constant="58" id="iws-4Y-sPG"/>
+                                    <constraint firstItem="Epc-1b-7ag" firstAttribute="centerY" secondItem="nTo-IW-zdu" secondAttribute="centerY" id="wdc-10-RWb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.41568627450000001" green="0.56862745100000001" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="nTo-IW-zdu" firstAttribute="top" secondItem="BP8-Zo-fze" secondAttribute="bottom" constant="40" id="4lZ-Gc-ewH"/>
+                            <constraint firstItem="xtm-Xz-idw" firstAttribute="top" secondItem="Kns-dm-tWx" secondAttribute="bottom" constant="30" id="ACe-2R-qbT"/>
+                            <constraint firstItem="nTo-IW-zdu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DVz-tG-94v"/>
+                            <constraint firstItem="xtm-Xz-idw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="F8P-NX-Sqi"/>
+                            <constraint firstItem="Kns-dm-tWx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="180" id="Qdj-GW-iqt"/>
+                            <constraint firstItem="BP8-Zo-fze" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="Tob-dL-CQ7"/>
+                            <constraint firstItem="Kns-dm-tWx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="ZO3-S9-AdB"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kns-dm-tWx" secondAttribute="trailing" constant="20" symbolic="YES" id="nqm-JZ-HT7"/>
+                            <constraint firstItem="BP8-Zo-fze" firstAttribute="top" secondItem="xtm-Xz-idw" secondAttribute="bottom" constant="30" id="weP-Uy-Hj9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="568.79999999999995" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="oval" width="58" height="58"/>
+    </resources>
+</document>

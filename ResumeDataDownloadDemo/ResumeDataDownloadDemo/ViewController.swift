@@ -25,8 +25,7 @@ class ViewController: UIViewController {
             name: "Floppy",
             expiry: .date(Date().addingTimeInterval(2*3600)),
             maxSize: 10000,
-            directory: try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask,
-                                                    appropriateFor: nil, create: true).appendingPathComponent("MyPreferences"),
+            directory: try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask,appropriateFor: nil, create: true).appendingPathComponent("MyPreferences"),
             protectionType: .complete
         )
         
